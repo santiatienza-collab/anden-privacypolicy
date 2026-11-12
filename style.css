@@ -1,0 +1,36 @@
+/* Inter (© The Inter Project Authors, SIL Open Font License 1.1), alojada aquí: no se pide nada a servidores externos */
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('fonts/inter-latin-wght-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('fonts/inter-latin-ext-wght-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+:root { --g950: #141416; --g900: #1c1c1f; --g800: #2a2a2e; --g700: #3a3a40; --g600: #5a5a60; --g400: #9a9aa2; --yellow: #ffd60a; --white: #f5f5f7; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { margin: 0; background: var(--g900); color: var(--white); font: 16px/1.65 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: var(--yellow); text-underline-offset: 3px; } a:hover { color: #fff; }
+:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; border-radius: 6px; }
+.wrap { width: min(820px, 100% - 40px); margin-inline: auto; }
+.top { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 10px 22px; background: rgba(42,42,46,.95); backdrop-filter: blur(8px);
+  border-bottom: 2px solid transparent; border-image: linear-gradient(90deg, transparent, var(--yellow) 20%, var(--yellow) 80%, transparent) 1; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--yellow); font-weight: 800; font-size: 22px; letter-spacing: -.025em; text-decoration: none; }
+.brand img { border-radius: 8px; }
+.back { font-size: 14px; color: var(--g400); text-decoration: none; } .back:hover { color: #fff; }
+h1 { font-size: clamp(32px, 5vw, 46px); line-height: 1.1; letter-spacing: -.03em; font-weight: 800; margin: 44px 0 10px; color: var(--yellow); }
+h2 { font-size: 24px; line-height: 1.2; letter-spacing: -.02em; margin: 44px 0 12px; }
+h3 { font-size: 17px; margin: 22px 0 8px; }
+.meta { color: var(--g400); font-size: 14px; }
+code { background: var(--g800); padding: 2px 7px; border-radius: 6px; font-size: .9em; }
+ul { padding-left: 22px; } li { margin-bottom: 7px; }
+.toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 26px 0; }
+.toc a { background: var(--g800); color: var(--white); text-decoration: none; font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 999px; }
+.toc a:hover { background: var(--yellow); color: var(--g950); }
+.box { background: var(--g800); border-radius: 18px; padding: 8px 24px 12px; margin-top: 34px; border: 1px solid var(--g700); }
+.box h2 { margin-top: 18px; }
+.table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 14px; border: 1px solid var(--g700); }
+table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14.5px; }
+th, td { text-align: left; vertical-align: top; padding: 11px 14px; border-bottom: 1px solid var(--g700); }
+th { background: var(--g800); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--g400); }
+tr:last-child td { border-bottom: 0; }
+footer { margin-top: 70px; padding: 28px 0; background: var(--g950); border-top: 1px solid var(--g800); color: var(--g400); font-size: 14px; }
+footer p { margin: 0; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

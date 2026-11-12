@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de privacidad · Andén</title>
+  <meta name="description" content="Política de privacidad de Andén, la app y web de información ferroviaria: qué datos se tratan, quién los trata, notificaciones, anuncios y tus derechos.">
+  <meta name="theme-color" content="#1c1c1f">
+  <link rel="icon" href="icon.png">
+  <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="https://santiatienza-collab.github.io/anden/"><img src="icon.png" alt="" width="36" height="36"><span>Andén</span></a>
+  <a class="back" href="https://santiatienza-collab.github.io/anden/">← Volver a la página de Andén</a>
+</header>
+
+<main class="wrap">
+  <h1>Política de privacidad</h1>
+  <p class="meta">Aplicación Android <strong>Andén</strong> (<code>com.anden.miapp</code>) y su web app · Última actualización: <time datetime="2026-11-12">12 de noviembre de 2026</time></p>
+
+  <nav class="toc" aria-label="Índice">
+    <a href="#resumen">Resumen</a><a href="#responsable">Responsable</a><a href="#datos">Qué datos se tratan</a><a href="#notificaciones">Notificaciones</a><a href="#anuncios">Anuncios</a><a href="#terceros">Servicios de terceros</a><a href="#derechos">Tus derechos</a><a href="#contacto">Contacto</a><a href="#english">English</a>
+  </nav>
+
+  <section id="resumen" class="box">
+    <h2>Resumen en pocas líneas</h2>
+    <ul>
+      <li><strong>No hay cuentas ni registro.</strong> No te pedimos nombre, correo ni teléfono.</li>
+      <li><strong>No usamos tu ubicación</strong>, ni tus contactos, fotos o archivos, ni el micrófono o la cámara.</li>
+      <li><strong>No tenemos servidor propio</strong> que guarde datos de usuarios: Andén solo <em>lee</em> datos públicos de trenes publicados en GitHub Pages.</li>
+      <li>Las <strong>notificaciones</strong> de alertas críticas llegan mediante <strong>Firebase Cloud Messaging</strong> (Google) y puedes desactivarlas cuando quieras.</li>
+      <li>La app muestra <strong>anuncios de Google AdMob</strong>, que pueden usar el identificador de publicidad de tu dispositivo.</li>
+      <li>No vendemos datos personales ni los usamos para otra cosa.</li>
+    </ul>
+  </section>
+
+  <section id="responsable">
+    <h2>1. Responsable</h2>
+    <p>Andén es un proyecto independiente, sin ánimo de lucro, desarrollado y mantenido por una persona a título particular (en GitHub, <a href="https://github.com/santiatienza-collab">santiatienza-collab</a>). Para cualquier asunto de privacidad, consulta el apartado <a href="#contacto">Contacto</a>.</p>
+    <p>Andén es una herramienta <strong>informativa</strong>: no es una aplicación oficial y no está vinculada a Renfe, Adif ni a ningún otro operador u organismo.</p>
+  </section>
+
+  <section id="datos">
+    <h2>2. Qué datos se tratan y quién los trata</h2>
+    <p>Andén no recoge ni guarda datos personales en servidores propios. Sin embargo, para funcionar, la app se comunica con servicios de terceros, que reciben los datos técnicos habituales de cualquier conexión a internet (por ejemplo, tu dirección IP y el tipo de dispositivo):</p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Para qué</th><th>Servicio</th><th>Qué puede tratar</th></tr></thead>
+      <tbody>
+        <tr><td>Datos de trenes, retrasos, avisos y alertas</td><td>GitHub Pages (<code>santiatienza-collab.github.io</code>)</td><td>Dirección IP y datos técnicos de la conexión. No se envía ningún dato tuyo: solo se descargan ficheros públicos.</td></tr>
+        <tr><td>Mapa</td><td>OpenFreeMap / OpenMapTiles (datos de © OpenStreetMap)</td><td>Dirección IP y las teselas del mapa que se piden al mover el mapa. Andén no envía tu ubicación.</td></tr>
+        <tr><td>Notificaciones de alertas críticas</td><td>Firebase Cloud Messaging (Google)</td><td>Identificador de la instalación y datos técnicos del dispositivo para entregar el mensaje. Ver <a href="#notificaciones">Notificaciones</a>.</td></tr>
+        <tr><td>Anuncios</td><td>Google AdMob</td><td>Identificador de publicidad, dirección IP y datos del dispositivo. Ver <a href="#anuncios">Anuncios</a>.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <h3>Datos que se guardan en tu dispositivo</h3>
+    <p>La app guarda solo en tu móvil unas preferencias: si prefieres el mapa oscuro, si quieres recibir notificaciones y qué alertas críticas ya te ha avisado (para no repetirlas). No salen de tu dispositivo y se borran al desinstalar la app.</p>
+    <h3>Permisos de Android</h3>
+    <ul>
+      <li><strong>Internet</strong>: necesario para descargar los datos y el mapa.</li>
+      <li><strong>Notificaciones</strong> (Android 13 o superior): para mostrarte las alertas críticas. Es opcional.</li>
+    </ul>
+    <p>La app no pide ni usa permisos de ubicación, contactos, almacenamiento, cámara ni micrófono.</p>
+  </section>
+
+  <section id="notificaciones">
+    <h2>3. Notificaciones push (alertas críticas)</h2>
+    <p>Si activas las notificaciones, la app se suscribe a un <em>tema</em> anónimo llamado <code>critical_alerts</code> a través de Firebase Cloud Messaging, el servicio de mensajería de Google. Cuando Andén detecta una alerta crítica, envía un mensaje a ese tema y Google lo entrega a todos los dispositivos suscritos.</p>
+    <ul>
+      <li><strong>Andén no recibe ni guarda</strong> el identificador de tu instalación (token), ni una lista de dispositivos ni datos que permitan identificarte.</li>
+      <li>Google trata el identificador de instalación y datos técnicos del dispositivo para poder entregar los mensajes, según la <a href="https://firebase.google.com/support/privacy">información de privacidad de Firebase</a> y la <a href="https://policies.google.com/privacy">Política de privacidad de Google</a>.</li>
+      <li>El mensaje solo contiene el texto de la alerta (un título, una descripción y, si se conoce, su ubicación en la red ferroviaria). No contiene datos sobre ti.</li>
+      <li><strong>Base:</strong> tu consentimiento. Puedes retirarlo en cualquier momento desde <em>Ajustes → Seguridad → Notificar alertas críticas</em> (la app se da de baja del tema) o desde los ajustes de notificaciones de Android.</li>
+    </ul>
+    <p>Las notificaciones son <strong>orientativas</strong>: se calculan con datos abiertos que llegan con minutos de retraso y no sustituyen a la señalización, a los sistemas de seguridad ni a las indicaciones del operador o de los servicios de emergencia.</p>
+  </section>
+
+  <section id="anuncios">
+    <h2>4. Anuncios (Google AdMob)</h2>
+    <p>Andén se financia con anuncios de <strong>Google AdMob</strong>. AdMob puede recoger y usar, entre otros, el <strong>identificador de publicidad</strong> de tu dispositivo, la dirección IP y datos del dispositivo y de la app para mostrar anuncios, medir su rendimiento, prevenir fraude y, según tu configuración, personalizarlos. Andén no recibe esos datos.</p>
+    <ul>
+      <li>Puedes gestionar o desactivar la personalización de anuncios y restablecer o eliminar tu identificador de publicidad en <em>Ajustes de Android → Google → Anuncios</em>.</li>
+      <li>Más información: <a href="https://policies.google.com/technologies/ads">Cómo usa Google los datos de las apps de socios</a> y <a href="https://support.google.com/admob/answer/6128543">privacidad de AdMob</a>.</li>
+      <li>En el Espacio Económico Europeo, Reino Unido y Suiza, los anuncios se muestran conforme a las opciones de consentimiento que Google pone a disposición del usuario.</li>
+    </ul>
+  </section>
+
+  <section id="terceros">
+    <h2>5. Web app y otros servicios</h2>
+    <p>La web app (<a href="https://santiatienza-collab.github.io/anden-datos/">santiatienza-collab.github.io/anden-datos</a>) <strong>no usa cookies ni herramientas de analítica</strong>. Para funcionar carga la biblioteca del mapa desde <code>unpkg.com</code>, los datos desde GitHub Pages y las teselas desde OpenFreeMap; esos servicios ven tu dirección IP como en cualquier página web. Guarda en tu navegador (almacenamiento local) qué alertas críticas ya te ha mostrado. Si activas los avisos del navegador, estos se muestran solo mientras la página está abierta.</p>
+    <p>Cada uno de estos servicios tiene su propia política de privacidad: <a href="https://docs.github.com/es/site-policy/privacy-policies/github-general-privacy-statement">GitHub</a>, <a href="https://openfreemap.org">OpenFreeMap</a>, <a href="https://policies.google.com/privacy">Google</a> y <a href="https://unpkg.com">unpkg</a>.</p>
+  </section>
+
+  <section>
+    <h2>6. Conservación, seguridad y menores</h2>
+    <ul>
+      <li>Andén no conserva datos personales de los usuarios. Lo que tratan Google, GitHub y los demás servicios se rige por sus propias políticas.</li>
+      <li>Las comunicaciones de la app con los servicios se hacen cifradas (HTTPS).</li>
+      <li>Andén no está dirigida a menores de 14 años y no recoge conscientemente datos de menores.</li>
+    </ul>
+  </section>
+
+  <section id="derechos">
+    <h2>7. Tus derechos</h2>
+    <p>De acuerdo con el Reglamento General de Protección de Datos (RGPD) y la normativa española, puedes ejercer los derechos de <strong>acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad</strong>, y retirar tu consentimiento cuando quieras. Como Andén no guarda datos que te identifiquen, la mayor parte de estos derechos se ejercen directamente ante Google (notificaciones y anuncios) o ante el servicio correspondiente. Si crees que tus datos no se tratan correctamente, puedes reclamar ante la <a href="https://www.aepd.es">Agencia Española de Protección de Datos (AEPD)</a>.</p>
+  </section>
+
+  <section>
+    <h2>8. Cambios en esta política</h2>
+    <p>Si la app cambia de forma que afecte a tus datos (por ejemplo, si se añade un nuevo servicio), esta política se actualizará y se indicará la fecha de la última revisión al principio de la página.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>9. Contacto</h2>
+    <p>Para preguntas, solicitudes o reclamaciones sobre privacidad, abre una consulta en <a href="https://github.com/santiatienza-collab/anden-privacypolicy/issues">github.com/santiatienza-collab/anden-privacypolicy/issues</a>. Por favor, no incluyas datos personales en una consulta pública.</p>
+  </section>
+
+  <section id="english" lang="en" class="box">
+    <h2>Privacy policy (English summary)</h2>
+    <p><strong>Andén</strong> (<code>com.anden.miapp</code>) is an independent, non-commercial informational app and web app about Spanish rail delays, incidents, safety alerts and station accessibility. It is not an official app and is not affiliated with Renfe, Adif or any operator.</p>
+    <ul>
+      <li>No accounts or sign-up. The app does not use your location, contacts, photos, files, camera or microphone. Permissions: internet and (optional) notifications.</li>
+      <li>There is no server of our own that stores user data. The app only downloads public data files from GitHub Pages and map tiles from OpenFreeMap; those services see your IP address as any website does.</li>
+      <li><strong>Push notifications</strong> (critical safety alerts) are delivered through Firebase Cloud Messaging by subscribing the app to an anonymous topic. We do not receive or store your FCM token. You can turn them off in <em>Settings → Security → Notify critical alerts</em> or in Android settings.</li>
+      <li><strong>Ads</strong> are served by Google AdMob, which may use your advertising ID, IP address and device data. You can manage or reset it in <em>Android Settings → Google → Ads</em>.</li>
+      <li>Preferences (dark map, notifications on/off, alerts already notified) are stored only on your device and removed on uninstall.</li>
+      <li>The web app uses no cookies or analytics. It loads the map library from unpkg.com.</li>
+      <li>Not directed to children under 14. You may exercise your GDPR rights (access, rectification, erasure, objection, restriction, portability) and lodge a complaint with the Spanish Data Protection Agency (AEPD). Contact: <a href="https://github.com/santiatienza-collab/anden-privacypolicy/issues">GitHub issues</a>.</li>
+    </ul>
+    <p>Alerts are informational and approximate: they do not replace railway signalling, operator instructions or emergency services.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><p>Andén · En memoria de las víctimas de Adamuz y de Urda · <a href="https://santiatienza-collab.github.io/anden/">Página de Andén</a> · <a href="https://santiatienza-collab.github.io/anden-datos/">Web app</a></p></div>
+</footer>
+</body>
+</html>
